@@ -1,7 +1,9 @@
 #DOCUMENTATION
+
 •	Install MATLAB R2021a from the internet: https://www.mathworks.com/help/install/install-products.html
 
-MATLAB SETUP
+#MATLAB SETUP
+
 •	To access MATLAB, go to the MathWorks website and click on the "Get Matlab" option.
 •	 Sign in using the KGP email id account otherwise, create an account with the KGP mail ID or any official email ID.
 •	After creating the account, select "Install Matlab" or "Open Online Matlab."
@@ -11,7 +13,8 @@ MATLAB SETUP
 •	After downloading the code, open the text file in MATLAB
 •	Connect the Arduino Mega2560 at COM3 ( a= arduino() works as a connection with arduino board.
 
-CODE SUMMARY
+#CODE SUMMARY
+
 •	The code reads the analog values from the Aurdino in a sequential manner, where initial row selection takes place followed by collecting the data column-wise to finally obtain a 52x36 “readings” matrix.
 •	Here we define an Arduino object as “a” which is connected at PORT “COM3” and it clears the entire workspace.
 •	Make use of four-row and three-column multiplexers and the pins used for the rows and columns are defined in the form of an array of pin names. 
@@ -23,19 +26,22 @@ CODE SUMMARY
 •	Finally, the code outputs the values of the matrix "readings" for further analysis or visualization.
 
 
-CODE EXPLANATION
+##CODE EXPLANATION
 
-PART A
+#PART A
+
 •	a = arduino("COM6","Mega2560")
-•	
- "COM6" and "Mega2560" are parameters that are passed to the Arduino function. 
+•	"COM6" and "Mega2560" are parameters that are passed to the Arduino function. 
 •	"COM3" refers to the specific serial port that the Arduino board is connected to on the computer. 
 •	The naming convention for serial ports on Windows typically starts with "COM" followed by a number.
 •	"Mega2560" which refers to the specific model of the Arduino board being used.
 
-Part B
+#Part B
+
 •	The line row_mux1 = ["D22" "D23" "D24" "D25"]; is creating a new array called row_mux1 that contains four string values: "D22", "D23", "D24", and "D25". These strings likely represent the digital pins on an Arduino board that will be used to control a multiplexer (mux) circuit to select a specific row of a matrix of buttons or sensors.
-Part C
+
+#Part C
+
 •	sensorValue=readVoltage(a, sensorPin) function helps in reading the voltage value from a sensor connected to the Arduino board through the analog input pin specified by the sensorPin variable. 
 
 •	The readVoltage function is a built-in function in MATLAB's Arduino support package that reads the voltage value from an analog input pin on the specified Arduino board (a in this case). 
