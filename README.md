@@ -1,4 +1,4 @@
-DOCUMENTATION
+DOCUMENTATION\n
 •	Install MATLAB R2021a from the internet: https://www.mathworks.com/help/install/install-products.html
 
 MATLAB SETUP
